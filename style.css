@@ -1,0 +1,101 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.content-loader{
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.reload {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  top: 25px;
+  right: 25px;
+  color: #171717;
+  background-color: #F3F3F3;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logo-loader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: #676565;
+}
+.logo-loader .icon {
+  width: 50%;
+  max-width: 500px;
+}
+.logo-loader .icon path {
+  color: #F3F3F3;
+  stroke-width: 1px;
+  stroke-dashoffset: -400;
+  stroke-dasharray: 400;
+}
+.logo-loader .icon path.is-active {
+  animation-name: icon;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.logo-loader .text {
+  width: 100%;
+  max-width: 900px;
+}
+.logo-loader .text text {
+  color: #F3F3F3;
+  stroke-width: 1px;
+  stroke-dashoffset: -800;
+  stroke-dasharray: 800;
+  font-size: 40px;
+  font-family: "GeosansLight"
+}
+.logo-loader .text text.is-active {
+  animation-name: text;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes icon {
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  75% {
+    fill: transparent;
+    stroke-width: 1px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #F3F3F3;
+    stroke-width: 0px;
+  }
+}
+@keyframes text {
+  50% {
+    fill: transparent;
+  }
+  75% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #F3F3F3;
+    stroke-width: 0px;
+  }
+}
